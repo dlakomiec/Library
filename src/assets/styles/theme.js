@@ -15,6 +15,6 @@ export const theme = {
 
 // Media Queris jak uzywac
 
-// @media ${({ theme }) => theme.mediaQuery.mobile} {
-//   background-color: green;
+//  @media ${({ theme }) => theme.media.tablet} {
+//   font-size: ${({ theme }) => theme.fontSize.xl};
 // }
