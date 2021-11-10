@@ -23,6 +23,7 @@ const RightDiv = styled.div`
   h1 {
     font-size: ${({ theme }) => theme.fontSize.xl};
     text-transform: uppercase;
+    margin-bottom: 45px;
   }
 
   form {
@@ -33,8 +34,9 @@ const RightDiv = styled.div`
     input {
       height: 60px;
       width: 400px;
-      margin: 35px;
+      margin: 5px 0 40px 0;
       background-color: ${({ theme }) => theme.colors.lightGrey};
+      font-size: ${({ theme }) => theme.fontSize.l};
     }
   }
 `;
@@ -45,6 +47,8 @@ const LoginButton = styled.button`
   background-color: ${({ theme }) => theme.colors.blue};
   font-size: ${({ theme }) => theme.fontSize.l};
   color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
 `;
 
 const LoginSite = () => {
