@@ -3,8 +3,13 @@
 export const theme = {
   colors: {
     black: '#1d3557',
+    lightGrey: '#F6F6F6',
+    blue: '#00A3FF',
   },
-  fontSize: {},
+  fontSize: {
+    xl: '35px',
+    l: '20px',
+  },
 
   mediaQuery: {
     mobile: `(min-width: 320px)`,
