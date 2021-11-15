@@ -1,3 +1,4 @@
+import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -13,7 +14,7 @@ const BookWrapper = styled.div`
   }
 `;
 
-const BooksListItem = ({ bookData: { title, author, genre } }) => (
+const BooksListItem = ({ deleteBook, bookData: { title, author, genre } }) => (
   <BookWrapper>
     <ol>
       <div>
@@ -27,6 +28,7 @@ const BooksListItem = ({ bookData: { title, author, genre } }) => (
       <div>
         <span>{genre}</span>
       </div>
+      <DeleteButton onClick={() => deleteBook(title)} />
     </ol>
   </BookWrapper>
 );

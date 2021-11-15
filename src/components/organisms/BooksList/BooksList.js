@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import BooksListItem from '../BooksListItem/BooksListItem';
-import { books } from 'data/books';
+import { books as booksData } from 'data/books';
 
 const BooksWrapper = styled.div`
   position: absolute;
@@ -12,17 +12,25 @@ const BooksWrapper = styled.div`
   overflow-y: scroll;
 `;
 
-const BooksList = () => (
-  <>
-    <BooksWrapper>
-      {/* <h2>Books list </h2> */}
-      <ul>
-        {books.map((bookData) => (
-          <BooksListItem bookData={bookData} />
-        ))}
-      </ul>
-    </BooksWrapper>
-  </>
-);
+const BooksList = () => {
+  const [books, setBooks] = useState(booksData);
+
+  const deleteBook = (title) => {
+    const filtredBooks = books.filter((book) => book.title !== title);
+    setBooks(filtredBooks);
+  };
+
+  return (
+    <>
+      <BooksWrapper>
+        <ul>
+          {books.map((bookData) => (
+            <BooksListItem deleteBook={deleteBook} bookData={bookData} />
+          ))}
+        </ul>
+      </BooksWrapper>
+    </>
+  );
+};
 
 export default BooksList;
