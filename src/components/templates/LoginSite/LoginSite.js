@@ -93,7 +93,7 @@ const LoginSite = () => {
             {/* <LoginButton>Zaloguj</LoginButton> */}
 
             <LoginButton>
-              <Link to="/bookList">Dalej cho</Link> {/* wywlic pozniej */}
+              <Link to="/dashboard">Dalej cho</Link> {/* wywlic pozniej */}
             </LoginButton>
           </form>
         </RightDiv>
