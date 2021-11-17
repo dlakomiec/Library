@@ -7,6 +7,8 @@ import LoginSite from 'components/templates/LoginSite/LoginSite';
 import BooksList from 'components/organisms/BooksList/BooksList';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
+import Navigation from 'components/organisms/Navigation/Navigation';
+import Dashboard from 'components/organisms/Dashboard/Dashboard';
 
 const Root = () => {
   const [books, setBooks] = useState(booksData);
@@ -53,15 +55,11 @@ const Root = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <nav>
-          <Link to="/">Logownaie </Link>
-          <Link to="/bookList">Lista ksiazek </Link>
-          <Link to="/form">Dodaj ksazke </Link>
-        </nav>
+        <Route path="/" exact>
+          <LoginSite />
+        </Route>
+        <Navigation />
         <Switch>
-          <Route exact path="/">
-            <LoginSite />
-          </Route>
           <Route path="/bookList">
             <BooksList deleteBook={deleteBook} books={books} />
           </Route>
@@ -72,6 +70,10 @@ const Root = () => {
               handleAddBook={handleAddBook}
               handleInputChange={handleInputChange}
             />
+          </Route>
+
+          <Route>
+            <Dashboard path="/dashboard" />
           </Route>
         </Switch>
       </ThemeProvider>

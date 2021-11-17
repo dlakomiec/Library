@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { cms } from 'assets/cms';
+import { Link } from 'react-router-dom';
 
 const LoginWrapper = styled.div`
   display: flex;
@@ -89,7 +90,11 @@ const LoginSite = () => {
               />
             </label>
             {/* <input type="submit" value="Wyślij" /> */}
-            <LoginButton>Zaloguj</LoginButton>
+            {/* <LoginButton>Zaloguj</LoginButton> */}
+
+            <LoginButton>
+              <Link to="/bookList">Dalej cho</Link> {/* wywlic pozniej */}
+            </LoginButton>
           </form>
         </RightDiv>
       </LoginWrapper>

@@ -17,6 +17,7 @@ const BooksList = ({ books, deleteBook }) => {
       <Wrapper>
         <BooksWrapper>
           <ul>
+            <h2>List książek</h2>
             {books.map((bookData) => (
               <BooksListItem deleteBook={deleteBook} bookData={bookData} />
             ))}
