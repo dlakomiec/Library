@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-left: 150px;
 `;
 
 const BooksList = ({ books, deleteBook }) => {

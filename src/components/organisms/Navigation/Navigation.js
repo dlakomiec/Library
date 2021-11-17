@@ -24,10 +24,10 @@ const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link' })`
   &:visited {
     color: black;
   }
-  /* &.active-link {
+  &.active-link {
     border-bottom: black 1px solid;
     padding-bottom: 5px;
-  } */
+  }
 `;
 
 const Navigation = () => (

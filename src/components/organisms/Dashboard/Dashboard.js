@@ -5,10 +5,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 120px;
 `;
 
 const DashboardWrapper = styled.div`
-  background-color: #f0efeb;
   height: 100vh;
   width: 60%;
   display: flex;

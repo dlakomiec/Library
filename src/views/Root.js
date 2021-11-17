@@ -40,8 +40,8 @@ const Root = () => {
         author: formValues.author,
         genre: formValues.genre,
       };
-
       setBooks([newBook, ...books]);
+      alert(`Dodano ksiązke o nazwie ${formValues.title}`);
     } else {
       alert(`Wszystkie pola muszą być wypełnione`);
     }
