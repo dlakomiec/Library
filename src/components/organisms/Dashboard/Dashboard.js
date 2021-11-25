@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 120px;
+  /* padding-left: 120px; */
 `;
 
 const DashboardWrapper = styled.div`

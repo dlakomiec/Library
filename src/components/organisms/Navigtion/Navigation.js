@@ -33,10 +33,12 @@ const StyledLink = styled(NavLink).attrs({ activeClassName: 'active-link' })`
 const Navigation = () => (
   <>
     <NavWrapper>
+      {/* <Wrapper> */}
       <h2>Księgarnia</h2>
       <StyledLink to="/dashboard">Dashboard</StyledLink>
       <StyledLink to="/form">Dodaj książkę </StyledLink>
       <StyledLink to="/bookList">Lista książek</StyledLink>
+      {/* </Wrapper> */}
     </NavWrapper>
   </>
 );
