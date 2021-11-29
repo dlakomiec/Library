@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'util/firebase';
-import { BooksWrapper } from './BooksList.styles';
-import styled from 'styled-components';
+import { BooksWrapper, Wrapper } from './BooksList.styles';
 import Book from '../Book/Book';
-
-const FormWrapper = styled.div``;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
 const BooksList = () => {
   const [bookList, setbookList] = useState();

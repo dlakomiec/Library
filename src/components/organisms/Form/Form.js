@@ -1,34 +1,7 @@
 import React, { useState } from 'react';
 import AddBookButton from 'components/atoms/AddBookButton/AddBookButton';
-import styled from 'styled-components';
 import firebase from 'util/firebase';
-
-const FormWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  label {
-    margin: 10px 0;
-  }
-`;
-const Input = styled.input`
-  padding: 5px 8px;
-  border: 1px solid black;
-  border-radius: 20px;
-  width: 250px;
-  &:focus {
-    outline: none;
-    box-shadow: -1px 2px 8px rgba(115, 124, 142, 0.3);
-  }
-`;
+import { FormWrapper, Wrapper, Input } from './Form.styles';
 
 const Form = () => {
   const [title, setTitle] = useState('');

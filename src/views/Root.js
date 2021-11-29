@@ -7,7 +7,7 @@ import BooksList from 'components/organisms/BooksList/BooksList';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import Navigation from 'components/organisms/Navigtion/Navigation';
-import Dashboard from 'components/organisms/Dashboard/Dashboard';
+import Dashboard from 'components/templates/Dashboard/Dashboard';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
