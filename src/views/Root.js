@@ -9,6 +9,7 @@ import Form from 'components/organisms/Form/Form';
 import Navigation from 'components/organisms/Navigtion/Navigation';
 import Dashboard from 'components/templates/Dashboard/Dashboard';
 import styled from 'styled-components';
+import Form1 from 'components/organisms/Form1/Form1';
 
 const Wrapper = styled.div`
   margin-left: 220px;
@@ -30,7 +31,7 @@ const Root = () => {
             </Route>
 
             <Route path="/form">
-              <Form />
+              <Form1 />
             </Route>
 
             <Route>

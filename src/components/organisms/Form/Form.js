@@ -32,9 +32,12 @@ const Form = () => {
       };
       alert(`Dodano ksiazke o nazwie ${title}`);
       bookRef.push(book);
-    } else {
-      alert(`Wszystkie pola muszą byc wypełnione`);
     }
+
+    setTitle('');
+    //  else {
+    //   alert(`Wszystkie pola muszą byc wypełnione`);
+    // }
   };
   return (
     <Wrapper>
