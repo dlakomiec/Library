@@ -29,11 +29,9 @@ const Root = () => {
             <Route path="/bookList">
               <BooksList />
             </Route>
-
             <Route path="/form">
               <Form1 />
             </Route>
-
             <Route>
               <Dashboard path="/dashboard" />
             </Route>

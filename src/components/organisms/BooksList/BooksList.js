@@ -4,18 +4,22 @@ import { BooksWrapper, Wrapper } from './BooksList.styles';
 import Book from '../Book/Book';
 
 const BooksList = () => {
-  const [bookList, setbookList] = useState();
+  const [bookList, setbookList] = useState([]);
 
   useEffect(() => {
     const bookRef = firebase.database().ref('Lista ksiazek');
     bookRef.on('value', (snapshot) => {
       const books = snapshot.val();
-      const bookList = [];
-      for (let id in books) {
-        bookList.push({ ...books[id], id });
-      }
-      setbookList(bookList);
+      const arr = [];
+      Object.keys(books).forEach((id) => {
+        arr.push({ ...books[id], id });
+      });
+      setbookList(arr);
     });
+
+    return () => {
+      setbookList([]);
+    };
   }, []);
 
   return (
