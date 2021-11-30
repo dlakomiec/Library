@@ -23,22 +23,20 @@ const BooksList = () => {
   }, []);
 
   return (
-    <>
-      <Wrapper>
-        <BooksWrapper>
-          <div>
-            <h2>Lista ksiazek</h2>
-            <ul>
-              {bookList
-                ? bookList.map((book, index) => (
-                    <Book book={book} key={index} />
-                  ))
-                : ''}
-            </ul>
-          </div>
-        </BooksWrapper>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <BooksWrapper>
+        <div>
+          <h2>Lista ksiazek</h2>
+          <ul>
+            {bookList
+              ? bookList.map((book, index) => (
+                  <Book book={book} key={book.id} />
+                ))
+              : ''}
+          </ul>
+        </div>
+      </BooksWrapper>
+    </Wrapper>
   );
 };
 

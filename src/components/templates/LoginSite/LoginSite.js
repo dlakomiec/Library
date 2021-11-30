@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import {
@@ -23,38 +23,36 @@ const LoginSite = () => {
     });
   };
   return (
-    <>
-      <LoginWrapper>
-        <LeftDiv />
-        <RightDiv>
-          <h1>ksiegarnia</h1>
-          <form>
-            <label>
-              <input
-                type="text"
-                name="login"
-                value={formValue.name}
-                onChange={handleInputCHange}
-              />
-            </label>
-            <label>
-              <input
-                type="password"
-                name="password"
-                value={formValue.name}
-                onChange={handleInputCHange}
-              />
-            </label>
-            {/* <input type="submit" value="Wyślij" /> */}
-            {/* <LoginButton>Zaloguj</LoginButton> */}
+    <LoginWrapper>
+      <LeftDiv />
+      <RightDiv>
+        <h1>ksiegarnia</h1>
+        <form>
+          <label htmlFor="login">
+            <input
+              type="text"
+              name="login"
+              value={formValue.name}
+              onChange={handleInputCHange}
+            />
+          </label>
+          <label htmlFor="password">
+            <input
+              type="password"
+              name="password"
+              value={formValue.name}
+              onChange={handleInputCHange}
+            />
+          </label>
+          {/* <input type="submit" value="Wyślij" /> */}
+          {/* <LoginButton>Zaloguj</LoginButton> */}
 
-            <LoginButton>
-              <Link to="/dashboard">Dalej cho</Link> {/* wywlic pozniej */}
-            </LoginButton>
-          </form>
-        </RightDiv>
-      </LoginWrapper>
-    </>
+          <LoginButton>
+            <Link to="/dashboard">Dalej cho</Link> {/* wywlic pozniej */}
+          </LoginButton>
+        </form>
+      </RightDiv>
+    </LoginWrapper>
   );
 };
 

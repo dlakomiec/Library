@@ -1,32 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import firebase from 'util/firebase';
 import './App.css';
 import { WrapperBook, DeleteButton, CompleteButton } from './Book.styles';
 
-const Book = ({ book }) => {
+const Book = ({ book: { id, complete, title, author } }) => {
   const deleteBook = () => {
-    const bookRef = firebase.database().ref('Lista ksiazek').child(book.id);
+    const bookRef = firebase.database().ref('Lista ksiazek').child(id);
     bookRef.remove();
   };
   const completeBook = () => {
-    const bookRef = firebase.database().ref('Lista ksiazek').child(book.id);
+    const bookRef = firebase.database().ref('Lista ksiazek').child(id);
     bookRef.update({
-      complete: !book.complete,
+      complete: !complete,
     });
   };
 
   return (
     <WrapperBook>
-      <p className={book.complete ? 'complete' : ''}>
-        <span>Tytuł ksiązki: </span> {book.title}
+      <p className={complete ? 'complete' : ''}>
+        <span>Tytuł ksiązki: </span> {title}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p className={complete ? 'complete' : ''}>
         <span>Autor ksiazki: </span>
-        {book.author}
+        {author}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p className={complete ? 'complete' : ''}>
         <span>Gatunek ksiązki: </span>
-        {book.title}
+        {title}
       </p>
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
       <CompleteButton onClick={completeBook}>Complete</CompleteButton>
@@ -35,3 +36,12 @@ const Book = ({ book }) => {
 };
 
 export default Book;
+
+Book.propTypes = {
+  book: PropTypes.shape({
+    id: PropTypes.string,
+    complete: PropTypes.bool,
+    author: PropTypes.string,
+    title: PropTypes.string,
+  }),
+};

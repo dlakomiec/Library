@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FormInput from 'components/molecules/FormInput/FormInput';
@@ -30,16 +29,15 @@ const Form1 = () => {
       onSubmit={onSubmit}
       validationSchema={handleValidation}
     >
-      {(props) => {
-        const {
-          values,
-          touched,
-          errors,
-          isSubmitting,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-        } = props;
+      {({
+        values,
+        touched,
+        errors,
+        isSubmitting,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+      }) => {
         return (
           <form onSubmit={handleSubmit}>
             <FormInput

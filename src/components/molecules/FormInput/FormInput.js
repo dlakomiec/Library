@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const FormInput = ({
   id,
@@ -37,3 +37,15 @@ const FormInput = ({
 };
 
 export default FormInput;
+
+FormInput.propTypes = {
+  id: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  values: PropTypes.objectOf(PropTypes.string),
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  errors: PropTypes.objectOf(PropTypes.string),
+  touched: PropTypes.objectOf(PropTypes.bool),
+  labelValue: PropTypes.string,
+};
