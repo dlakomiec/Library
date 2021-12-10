@@ -12,6 +12,18 @@ export const NavWrapper = styled.nav`
   background-color: #edf6f9;
 `;
 
+export const SignOutButton = styled.button`
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.red};
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 450px;
+`;
+
 export const StyledLink = styled(NavLink).attrs({
   activeClassName: 'active-link',
 })`
