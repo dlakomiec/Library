@@ -48,4 +48,19 @@ export const LoginButton = styled.button`
   color: white;
   margin-top: 30px;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+`;
+
+export const SignInButton = styled.button`
+  cursor: pointer;
+  width: 400px;
+  height: 60px;
+  background-color: ${({ theme }) => theme.colors.yellow};
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  margin-top: 10px;
 `;

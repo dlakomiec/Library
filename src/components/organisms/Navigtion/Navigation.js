@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavWrapper, StyledLink } from './Navigation.styles';
+import firebase from 'util/firebase';
 
 const Navigation = () => (
   <>
     <NavWrapper>
-      {/* <Wrapper> */}
       <h2>Księgarnia</h2>
-      <StyledLink to="/dashboard">Dashboard</StyledLink>
+      <StyledLink to="/welcomedashboard">Dashboard</StyledLink>
       <StyledLink to="/form">Dodaj książkę </StyledLink>
       <StyledLink to="/bookList">Lista książek</StyledLink>
-      {/* </Wrapper> */}
+      <button onClick={() => firebase.auth().signOut()}>Sign out</button>
     </NavWrapper>
   </>
 );

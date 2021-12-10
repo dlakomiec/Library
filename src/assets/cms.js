@@ -1,4 +1,4 @@
-import books from './imgaes/books.jpeg';
+import books from './imgaes/books.png';
 
 export const cms = {
   images: {

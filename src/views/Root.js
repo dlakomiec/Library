@@ -1,3 +1,49 @@
+// import React from 'react';
+// import { GlobalStyle } from 'assets/styles/GlobalStyle';
+// import { ThemeProvider } from 'styled-components';
+// import { theme } from 'assets/styles/theme';
+// import LoginSite from 'components/templates/LoginSite/LoginSite';
+// import BooksList from 'components/organisms/BooksList/BooksList';
+// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import Form from 'components/organisms/Form/Form';
+// import Navigation from 'components/organisms/Navigtion/Navigation';
+// import Dashboard from 'components/templates/Dashboard/Dashboard';
+// import styled from 'styled-components';
+// import Form1 from 'components/organisms/Form/Form';
+
+// const Wrapper = styled.div`
+//   margin-left: 220px;
+// `;
+
+// const Root = () => {
+//   return (
+//     <BrowserRouter>
+//       <ThemeProvider theme={theme}>
+//         <GlobalStyle />
+//         <Route path="/" exact>
+//           <LoginSite />
+//         </Route>
+//         <Navigation />
+//         <Wrapper>
+//           <Switch>
+//             <Route path="/bookList">
+//               <BooksList />
+//             </Route>
+//             <Route path="/form">
+//               <Form />
+//             </Route>
+//             <Route>
+//               <Dashboard path="/dashboard" />
+//             </Route>
+//           </Switch>
+//         </Wrapper>
+//       </ThemeProvider>
+//     </BrowserRouter>
+//   );
+// };
+
+// export default Root;
+
 import React from 'react';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -6,10 +52,13 @@ import LoginSite from 'components/templates/LoginSite/LoginSite';
 import BooksList from 'components/organisms/BooksList/BooksList';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
-import Navigation from 'components/organisms/Navigtion/Navigation';
-import Dashboard from 'components/templates/Dashboard/Dashboard';
+// import Navigation from 'components/organisms/Navigation/Navigation';
+// import WelcomeDashboard from 'components/organisms/WelcomeDashboard/WelcomeDashboard';
 import styled from 'styled-components';
-import Form1 from 'components/organisms/Form1/Form1';
+import { AuthProvider } from 'components/Auth';
+import PrivateRoute from 'components/PrivateRoute';
+import Dashboard from 'components/templates/Dashboard/Dashboard';
+import SignUpSite from 'components/SignUpSite';
 
 const Wrapper = styled.div`
   margin-left: 220px;
@@ -20,23 +69,21 @@ const Root = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Route path="/" exact>
-          <LoginSite />
-        </Route>
-        <Navigation />
-        <Wrapper>
-          <Switch>
-            <Route path="/bookList">
-              <BooksList />
+        <AuthProvider>
+          <div>
+            {/* <Navigation /> */}
+            <PrivateRoute exact path="/" component={Dashboard} />
+            <Route exact path="/login" component={LoginSite} />
+            <Route exact path="/signup" component={SignUpSite} />
+            <PrivateRoute exact path="/form" component={Form} />
+            <PrivateRoute exact path="/booklist" component={BooksList} />
+
+            {/* <Route path="/" exact>
+              <LoginSite />
             </Route>
-            <Route path="/form">
-              <Form1 />
-            </Route>
-            <Route>
-              <Dashboard path="/dashboard" />
-            </Route>
-          </Switch>
-        </Wrapper>
+            <Dashboard /> */}
+          </div>
+        </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>
   );
