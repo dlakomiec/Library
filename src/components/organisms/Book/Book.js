@@ -26,7 +26,7 @@ const Book = ({ book }) => {
       </p>
       <p className={book.complete ? 'complete' : ''}>
         <span>Gatunek ksiązki: </span>
-        {book.title}
+        {book.genre}
       </p>
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
       <CompleteButton onClick={completeBook}>Complete</CompleteButton>

@@ -64,3 +64,16 @@ export const SignInButton = styled.button`
   text-transform: uppercase;
   margin-top: 10px;
 `;
+
+export const AdminButton = styled.button`
+  width: 200px;
+  height: 60px;
+  background-color: #5c6784;
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+`;

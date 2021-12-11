@@ -67,6 +67,7 @@ import {
   RightDiv,
   LoginButton,
   SignInButton,
+  AdminButton,
 } from './LoginSite.styles';
 import { Link } from 'react-router-dom';
 import { withRouter, Redirect } from 'react-router';
@@ -93,7 +94,7 @@ const LoginSite = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/welcomedashboard" />;
   }
 
   return (
@@ -109,14 +110,14 @@ const LoginSite = ({ history }) => {
             <label>
               <input name="password" type="password" placeholder="Password" />
             </label>
-            {/* <LoginButton>
-              <Link to="/dashboard">Dalej cho</Link>
-            </LoginButton> */}
             <LoginButton type="submit">Zaloguj sie</LoginButton>
             <Link to="/signup">
               <SignInButton>Zarejestruj sie</SignInButton>
             </Link>
           </form>
+          <Link to="/adminlogin">
+            <AdminButton>Admin</AdminButton>
+          </Link>
         </RightDiv>
       </LoginWrapper>
     </>
