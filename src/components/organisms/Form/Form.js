@@ -6,22 +6,33 @@ import FormInput from 'components/molecules/FormInput/FormInput';
 import firebase from 'util/firebase';
 import Navigation from '../Navigtion/Navigation';
 
-// const Form = styled.form`
-//   height: 100vh;
-//   background-color: grey;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// `;
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 
   label {
     margin: 10px 0;
   }
+`;
+
+const FormStyled = styled.form`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-item: center; */
+`;
+
+const AddBookButton = styled.button`
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.blue};
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
 `;
 
 const initialValues = { author: '', title: '', genre: '' };
@@ -63,7 +74,7 @@ const Form1 = () => {
               handleSubmit,
             } = props;
             return (
-              <form onSubmit={handleSubmit}>
+              <FormStyled onSubmit={handleSubmit}>
                 <FormInput
                   id="author"
                   placeholder="Enter author"
@@ -97,10 +108,10 @@ const Form1 = () => {
                   touched={touched}
                   labelValue="Gatunek: "
                 />
-                <button type="submit" disabled={isSubmitting}>
-                  Submit
-                </button>
-              </form>
+                <AddBookButton type="submit" disabled={isSubmitting}>
+                  Dodaj
+                </AddBookButton>
+              </FormStyled>
             );
           }}
         </Formik>

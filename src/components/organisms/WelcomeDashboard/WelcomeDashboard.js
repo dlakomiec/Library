@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navigation from '../Navigtion/Navigation';
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,12 +18,15 @@ const DashboardWrapper = styled.div`
 `;
 
 const WelcomeDashboard = () => (
-  <Wrapper>
-    <DashboardWrapper>
-      <h2>Witaj w panelu</h2>
-      <p>lorem ipsum cos tam cos tam </p>
-    </DashboardWrapper>
-  </Wrapper>
+  <>
+    <Navigation />
+    <Wrapper>
+      <DashboardWrapper>
+        <h2>Witaj w panelu</h2>
+        <p>lorem ipsum cos tam cos tam </p>
+      </DashboardWrapper>
+    </Wrapper>
+  </>
 );
 
 export default WelcomeDashboard;

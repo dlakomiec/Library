@@ -1,13 +1,22 @@
 import styled from 'styled-components';
 
 export const BooksWrapper = styled.div`
+  h2 {
+    text-align: center;
+  }
   div {
-    h2 {
-      text-align: center;
+    margin: 30px 40px;
+    ul {
+      display: flex;
+      flex-grow: 2;
+      flex-wrap: wrap;
+      /* padding: 20px 30px; */
     }
   }
-  /* height: 100vh;
-  width: 500px; */
+  /* display: flex; */
+  /* height: 100vh; */
+  margin-left: 220px;
+  width: 900px;
   /* background-color: #eff2f1; */
   /* overflow-y: scroll; */
 `;

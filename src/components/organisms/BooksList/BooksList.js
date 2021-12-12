@@ -28,8 +28,8 @@ const BooksList = () => {
       <Navigation />
       <Wrapper>
         <BooksWrapper>
+          <h2>Lista ksiazek</h2>
           <div>
-            <h2>Lista ksiazek</h2>
             <ul>
               {bookList
                 ? bookList.map((book, index) => (
