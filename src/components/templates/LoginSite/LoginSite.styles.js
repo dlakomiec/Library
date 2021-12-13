@@ -77,3 +77,29 @@ export const AdminButton = styled.button`
   margin-top: 10px;
   cursor: pointer;
 `;
+
+export const SignupButton = styled.button`
+  width: 400px;
+  height: 60px;
+  background-color: ${({ theme }) => theme.colors.yellow};
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+`;
+
+export const ComeBackButton = styled.button`
+  width: 400px;
+  height: 60px;
+  background-color: black;
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+`;

@@ -17,7 +17,7 @@ const AdminNavigation = () => (
       <h2>Panel Admina</h2>
       {/* <StyledLink to="/welcome">Dashboard</StyledLink> */}
       <StyledLink to="/adminform">Dodaj książkę </StyledLink>
-      <StyledLink to="/adminbooklist">Lista books</StyledLink>
+      <StyledLink to="/adminbooklist">Lista książek</StyledLink>
 
       {/* <SignOutButton onClick={() => firebase.auth().signOut()}>
         Wyloguj

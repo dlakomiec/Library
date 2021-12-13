@@ -34,7 +34,7 @@ const AddBookButton = styled.button`
   text-transform: uppercase;
 `;
 
-const initialValues = { author: '', title: '', genre: '' };
+const initialValues = { author: '', title: '', genre: '', pages: '' };
 
 const AdminForm = () => {
   const onSubmit = async (values, actions) => {
@@ -44,6 +44,7 @@ const AdminForm = () => {
       complete: false,
     };
     bookRef.push(book);
+    alert('Dodano książkę');
     actions.resetForm();
   };
 
@@ -51,6 +52,7 @@ const AdminForm = () => {
     author: Yup.string().required('Autor jest wymagany'),
     title: Yup.string().required('Tytuł jest wymagany'),
     genre: Yup.string().required('Gatunek jest wymagany'),
+    pages: Yup.string().required('Liczba stron jest wymagana '),
   });
 
   return (
@@ -106,6 +108,17 @@ const AdminForm = () => {
                   errors={errors}
                   touched={touched}
                   labelValue="Gatunek: "
+                />
+                <FormInput
+                  id="pages"
+                  placeholder="pages"
+                  type="number"
+                  values={values}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  errors={errors}
+                  touched={touched}
+                  labelValue="Liczba stron: "
                 />
                 <AddBookButton type="submit" disabled={isSubmitting}>
                   Dodaj

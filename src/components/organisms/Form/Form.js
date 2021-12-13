@@ -1,41 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FormInput from 'components/molecules/FormInput/FormInput';
 import firebase from 'util/firebase';
 import Navigation from '../Navigtion/Navigation';
+import { Wrapper, FormStyled, AddBookButton } from './Form.styles';
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
-  label {
-    margin: 10px 0;
-  }
-`;
-
-const FormStyled = styled.form`
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-item: center; */
-`;
-
-const AddBookButton = styled.button`
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.blue};
-  border: none;
-  border-radius: 20px;
-  color: white;
-  padding: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
-const initialValues = { author: '', title: '', genre: '' };
+const initialValues = { author: '', title: '', genre: '', pages: '' };
 
 const Form1 = () => {
   const onSubmit = async (values, actions) => {
@@ -45,6 +16,7 @@ const Form1 = () => {
       complete: false,
     };
     bookRef.push(book);
+    alert('Dodano książkę');
     actions.resetForm();
   };
 
@@ -52,6 +24,7 @@ const Form1 = () => {
     author: Yup.string().required('Autor jest wymagany'),
     title: Yup.string().required('Tytuł jest wymagany'),
     genre: Yup.string().required('Gatunek jest wymagany'),
+    pages: Yup.string().required('Liczba stron jest wymagana '),
   });
 
   return (
@@ -108,6 +81,18 @@ const Form1 = () => {
                   touched={touched}
                   labelValue="Gatunek: "
                 />
+                <FormInput
+                  id="pages"
+                  placeholder="pages"
+                  type="number"
+                  values={values}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  errors={errors}
+                  touched={touched}
+                  labelValue="Liczba stron: "
+                />
+
                 <AddBookButton type="submit" disabled={isSubmitting}>
                   Dodaj
                 </AddBookButton>

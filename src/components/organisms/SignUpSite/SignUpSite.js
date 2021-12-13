@@ -7,13 +7,15 @@ import {
   LeftDiv,
   LoginWrapper,
   RightDiv,
+  SignupButton,
+  ComeBackButton,
 } from '../../templates/LoginSite/LoginSite.styles';
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
-      const { email, password } = event.target.elements;
+      const { email, password, password2 } = event.target.elements;
       // if (event.target.elements.password == event.target.elements.password2) {
       try {
         await firebase
@@ -44,10 +46,10 @@ const SignUp = ({ history }) => {
           <label>
             <input name="password2" type="password" placeholder="Password" />
           </label>
-          <button type="submit">Zarejestruj się</button>
+          <SignupButton type="submit">Zarejestruj się</SignupButton>
         </form>
         <Link to="/">
-          <button>Powrót do strony głownej</button>
+          <ComeBackButton>Powrót do strony głownej</ComeBackButton>
         </Link>
       </RightDiv>
     </LoginWrapper>
