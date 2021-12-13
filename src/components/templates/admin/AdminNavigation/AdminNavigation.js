@@ -11,13 +11,13 @@ const LogOut = () => {
   firebase.auth().signOut();
 };
 
-const Navigation = () => (
+const AdminNavigation = () => (
   <>
     <NavWrapper>
       <h2>Panel Admina</h2>
       {/* <StyledLink to="/welcome">Dashboard</StyledLink> */}
-      <StyledLink to="/form">Dodaj książkę </StyledLink>
-      <StyledLink to="/bookList">Lista książek</StyledLink>
+      <StyledLink to="/adminform">Dodaj książkę </StyledLink>
+      <StyledLink to="/adminbooklist">Lista books</StyledLink>
 
       {/* <SignOutButton onClick={() => firebase.auth().signOut()}>
         Wyloguj
@@ -27,4 +27,4 @@ const Navigation = () => (
   </>
 );
 
-export default Navigation;
+export default AdminNavigation;

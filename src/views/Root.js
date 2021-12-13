@@ -14,6 +14,9 @@ import SignUpSite from 'components/organisms/SignUpSite/SignUpSite';
 import WelcomeDashboard from 'components/organisms/WelcomeDashboard/WelcomeDashboard';
 import AdminLogin from 'components/templates/admin/AdminLogin/AdminLogin';
 import AdminDashboard from 'components/templates/admin/AdminDashboard/AdminDashboard';
+// import AdminForm from 'components/templates/admin/AdminForm/AdminForm';
+import AdminForm from '../components/templates/admin/AdminForm/AdminForm';
+import AdminBookList from '../components/templates/admin/AdminBookList/AdminBookList';
 
 const Wrapper = styled.div`
   margin-left: 220px;
@@ -26,7 +29,6 @@ const Root = () => {
         <GlobalStyle />
         <AuthProvider>
           <div>
-            {/* <Navigation /> */}
             <PrivateRoute exact path="/" component={Dashboard} />
             <Route exact path="/login" component={LoginSite} />
             <Route exact path="/signup" component={SignUpSite} />
@@ -34,6 +36,12 @@ const Root = () => {
             <PrivateRoute exact path="/booklist" component={BooksList} />
             <PrivateRoute exact path="/welcome" component={WelcomeDashboard} />
             <Route exact path="/adminlogin" component={AdminLogin} />
+            <PrivateRoute exact path="/adminform" component={AdminForm} />
+            <PrivateRoute
+              exact
+              path="/adminbooklist"
+              component={AdminBookList}
+            />
             <Route exact path="/admin" component={AdminDashboard} />
           </div>
         </AuthProvider>

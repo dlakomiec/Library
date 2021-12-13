@@ -28,7 +28,7 @@ const Book = ({ book }) => {
         <span>Gatunek ksiązki: </span>
         {book.genre}
       </p>
-      {/* <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton> */}
+      <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
       <CompleteButton onClick={completeBook}>Complete</CompleteButton>
     </WrapperBook>
   );
