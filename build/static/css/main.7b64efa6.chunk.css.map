@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/organisms/Book/App.css"],"names":[],"mappings":"AAAA,UACE,4BACF","file":"main.7b64efa6.chunk.css","sourcesContent":[".complete {\n  text-decoration: line-through;\n}\n"]}

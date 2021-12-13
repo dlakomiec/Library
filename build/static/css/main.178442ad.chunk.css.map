@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/templates/admin/AdminBook/App.css"],"names":[],"mappings":"AAAA,UACE,4BACF","file":"main.178442ad.chunk.css","sourcesContent":[".complete {\n  text-decoration: line-through;\n}\n"]}
