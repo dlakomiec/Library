@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import FormInput from 'components/molecules/FormInput/FormInput';
 import firebase from 'util/firebase';
@@ -92,7 +92,6 @@ const Form1 = () => {
                   touched={touched}
                   labelValue="Liczba stron: "
                 />
-
                 <AddBookButton type="submit" disabled={isSubmitting}>
                   Dodaj
                 </AddBookButton>

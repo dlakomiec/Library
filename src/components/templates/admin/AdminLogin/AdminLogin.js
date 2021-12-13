@@ -5,6 +5,7 @@ import firebase from 'util/firebase';
 import { AuthContext } from 'components/Auth';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Wrapper, MainPageButton } from '../AdminForm/AdminForm.styles';
+import Example from './Example';
 
 const AdminLogin = ({ history }) => {
   const handleLogin = useCallback(

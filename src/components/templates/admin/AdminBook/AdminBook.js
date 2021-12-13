@@ -24,14 +24,19 @@ const Book = ({ book }) => {
         <span>Autor ksiazki: </span>
         {book.author}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
-        <span>Gatunek ksiązki: </span>
-        {book.genre}
-      </p>
+      {/*<p className={book.complete ? 'complete' : ''}>*/}
+      {/*  <span>Gatunek ksiązki: </span>*/}
+      {/*  {book.genre}*/}
+      {/*</p>*/}
       <p className={book.complete ? 'complete' : ''}>
         <span>Liczba stron: </span>
         {book.pages}
       </p>
+      <p className={book.complete ? 'complete' : ''}>
+        <span>Gatunek książki: </span>
+        {book.picked}
+      </p>
+
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
       <CompleteButton onClick={completeBook}>Complete</CompleteButton>
     </WrapperBook>
