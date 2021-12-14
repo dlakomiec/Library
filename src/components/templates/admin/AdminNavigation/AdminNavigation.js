@@ -18,6 +18,7 @@ const AdminNavigation = () => (
       <StyledLink to="/adminform">Dodaj książkę </StyledLink>
       <StyledLink to="/adminbooklist">Lista książek</StyledLink>
       <StyledLink to="/upcomingform">Dodaj nowość</StyledLink>
+      <StyledLink to="/upcominglist">Nadchodzące</StyledLink>
       <SignOutButton onClick={LogOut}>Wyloguj</SignOutButton>
     </NavWrapper>
   </>

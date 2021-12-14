@@ -25,11 +25,10 @@ const UpcomingList = () => {
 
   return (
     <>
-      {/*<Navigation />*/}
-      {/*<AdminNavigation />*/}
+      <AdminNavigation />
       <Wrapper>
         <BooksWrapper>
-          <h2>Lista ksiazek</h2>
+          <h2>Nadchodzące</h2>
           <div>
             <ul>
               {bookList

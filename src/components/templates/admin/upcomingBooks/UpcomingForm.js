@@ -47,7 +47,7 @@ const DescWrapper = styled.div`
   height: 70px;
 `;
 
-const initialValues = { author: '', title: '', pages: '', picked: '' };
+const initialValues = { author: '', title: '', pages: '' };
 
 const UpcomingForm = () => {
   const onSubmit = async (values, actions) => {

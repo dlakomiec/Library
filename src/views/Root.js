@@ -18,6 +18,7 @@ import AdminDashboard from 'components/templates/admin/AdminDashboard/AdminDashb
 import AdminForm from '../components/templates/admin/AdminForm/AdminForm';
 import AdminBookList from '../components/templates/admin/AdminBookList/AdminBookList';
 import UpcomingForm from 'components/templates/admin/upcomingBooks/UpcomingForm';
+import UpcomingList from 'components/templates/admin/upcomingBooks/UpcomingList';
 
 const Wrapper = styled.div`
   margin-left: 220px;
@@ -44,6 +45,7 @@ const Root = () => {
               path="/adminbooklist"
               component={AdminBookList}
             />
+            <PrivateRoute exact path="/upcominglist" component={UpcomingList} />
             <Route exact path="/admin" component={AdminDashboard} />
           </div>
         </AuthProvider>
