@@ -8,6 +8,7 @@ import AdminNavigation from '../AdminNavigation/AdminNavigation';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -39,6 +40,10 @@ const ChecboxForm = styled.form`
   flex-direction: column;
   width: 200px;
 `;
+const DescWrapper = styled.div`
+  width: 200px;
+  height: 70px;
+`;
 
 const initialValues = { author: '', title: '', pages: '', picked: '' };
 // const initialValues = { author: '', title: '', genre: '', pages: '', picked: '' };
@@ -66,7 +71,11 @@ const AdminForm = () => {
   return (
     <>
       <AdminNavigation />
+
       <Wrapper>
+        <DescWrapper>
+          <h3>Dodaj książkę</h3>
+        </DescWrapper>
         <Formik
           initialValues={initialValues}
           onSubmit={onSubmit}
