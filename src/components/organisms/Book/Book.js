@@ -25,7 +25,7 @@ const Book = ({ book }) => {
         {book.author}
       </p>
       <p className={book.complete ? 'complete' : ''}>
-        <span>Gatunek ksiązki: </span>
+        <span>Gatunek książki: </span>
         {book.genre}
       </p>
       <p className={book.complete ? 'complete' : ''}>

@@ -28,3 +28,8 @@ export const AddBookButton = styled.button`
   font-weight: bold;
   text-transform: uppercase;
 `;
+export const ChecboxForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+`;

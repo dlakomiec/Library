@@ -34,7 +34,7 @@ const Book = ({ book }) => {
       </p>
       <p className={book.complete ? 'complete' : ''}>
         <span>Gatunek książki: </span>
-        {book.picked}
+        {book.genre}
       </p>
 
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>

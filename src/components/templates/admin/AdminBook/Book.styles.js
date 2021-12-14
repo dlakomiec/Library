@@ -5,7 +5,7 @@ export const WrapperBook = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /* width: 500px; */
+  width: 300px;
   margin: 15px 0 0 0;
 
   p {

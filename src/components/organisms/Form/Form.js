@@ -1,10 +1,10 @@
 import React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import FormInput from 'components/molecules/FormInput/FormInput';
 import firebase from 'util/firebase';
 import Navigation from '../Navigtion/Navigation';
-import { Wrapper, FormStyled, AddBookButton } from './Form.styles';
+import { Wrapper, FormStyled, AddBookButton, ChecboxForm } from './Form.styles';
 
 const initialValues = { author: '', title: '', genre: '', pages: '' };
 
@@ -49,17 +49,6 @@ const Form1 = () => {
             return (
               <FormStyled onSubmit={handleSubmit}>
                 <FormInput
-                  id="author"
-                  placeholder="Enter author"
-                  type="text"
-                  values={values}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  errors={errors}
-                  touched={touched}
-                  labelValue="Author: "
-                />
-                <FormInput
                   id="title"
                   placeholder="Enter title"
                   type="text"
@@ -71,16 +60,27 @@ const Form1 = () => {
                   labelValue="Title: "
                 />
                 <FormInput
-                  id="genre"
-                  placeholder="genre"
+                  id="author"
+                  placeholder="Enter author"
                   type="text"
                   values={values}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   errors={errors}
                   touched={touched}
-                  labelValue="Gatunek: "
+                  labelValue="Author: "
                 />
+                {/*<FormInput*/}
+                {/*  id="genre"*/}
+                {/*  placeholder="genre"*/}
+                {/*  type="text"*/}
+                {/*  values={values}*/}
+                {/*  onChange={handleChange}*/}
+                {/*  onBlur={handleBlur}*/}
+                {/*  errors={errors}*/}
+                {/*  touched={touched}*/}
+                {/*  labelValue="Gatunek: "*/}
+                {/*/>*/}
                 <FormInput
                   id="pages"
                   placeholder="pages"
@@ -92,6 +92,32 @@ const Form1 = () => {
                   touched={touched}
                   labelValue="Liczba stron: "
                 />
+                <ChecboxForm>
+                  <p>Gatunek książki:</p>
+                  <label>
+                    <Field type="radio" name="genre" value="Fantasy" />
+                    Fantasy
+                  </label>
+                  <label>
+                    <Field type="radio" name="genre" value="Biografia" />
+                    Biografia
+                  </label>
+                  <label>
+                    <Field type="radio" name="genre" value="Rozwój osobisty" />
+                    Rozwój osobisty
+                  </label>
+                  <label>
+                    <Field type="radio" name="genre" value="Kryminał" />
+                    Kryminał
+                  </label>
+                  <label>
+                    <Field type="radio" name="genre" value="Naukowe" />
+                    Naukowe
+                  </label>
+
+                  <div>Wybrany gatunek: {values.genre}</div>
+                </ChecboxForm>
+
                 <AddBookButton type="submit" disabled={isSubmitting}>
                   Dodaj
                 </AddBookButton>

@@ -85,17 +85,6 @@ const AdminForm = () => {
             return (
               <FormStyled onSubmit={handleSubmit}>
                 <FormInput
-                  id="author"
-                  placeholder="Enter author"
-                  type="text"
-                  values={values}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  errors={errors}
-                  touched={touched}
-                  labelValue="Author: "
-                />
-                <FormInput
                   id="title"
                   placeholder="Enter title"
                   type="text"
@@ -105,6 +94,17 @@ const AdminForm = () => {
                   errors={errors}
                   touched={touched}
                   labelValue="Title: "
+                />
+                <FormInput
+                  id="author"
+                  placeholder="Enter author"
+                  type="text"
+                  values={values}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  errors={errors}
+                  touched={touched}
+                  labelValue="Author: "
                 />
                 {/*<FormInput*/}
                 {/*  id="genre"*/}
@@ -128,31 +128,33 @@ const AdminForm = () => {
                   touched={touched}
                   labelValue="Liczba stron: "
                 />
+
                 <ChecboxForm>
                   <p>Gatunek książki:</p>
                   <label>
-                    <Field type="radio" name="picked" value="Fantasy" />
+                    <Field type="radio" name="genre" value="Fantasy" />
                     Fantasy
                   </label>
                   <label>
-                    <Field type="radio" name="picked" value="Biografia" />
+                    <Field type="radio" name="genre" value="Biografia" />
                     Biografia
                   </label>
                   <label>
-                    <Field type="radio" name="picked" value="Rozwój osobisty" />
+                    <Field type="radio" name="genre" value="Rozwój osobisty" />
                     Rozwój osobisty
                   </label>
                   <label>
-                    <Field type="radio" name="picked" value="Kryminał" />
+                    <Field type="radio" name="genre" value="Kryminał" />
                     Kryminał
                   </label>
                   <label>
-                    <Field type="radio" name="picked" value="Naukowe" />
+                    <Field type="radio" name="genre" value="Naukowe" />
                     Naukowe
                   </label>
 
-                  <div>Picked: {values.picked}</div>
+                  <div>Wybrany gatunek: {values.genre}</div>
                 </ChecboxForm>
+
                 <AddBookButton type="submit" disabled={isSubmitting}>
                   Dodaj
                 </AddBookButton>
