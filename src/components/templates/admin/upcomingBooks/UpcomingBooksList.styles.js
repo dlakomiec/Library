@@ -7,18 +7,15 @@ export const BooksWrapper = styled.div`
   div {
     margin: 30px 40px;
     ul {
+      border: 1px solid grey;
       display: flex;
       flex-grow: 2;
       flex-wrap: wrap;
-      /* padding: 20px 30px; */
     }
   }
-  /* display: flex; */
-  /* height: 100vh; */
+
   margin-left: 220px;
   width: 900px;
-  /* background-color: #eff2f1; */
-  /* overflow-y: scroll; */
 `;
 
 export const Wrapper = styled.div`

@@ -28,15 +28,15 @@ export const DeleteButton = styled.button`
   text-transform: uppercase;
 `;
 
-export const CompleteButton = styled.button`
+export const MoveButton = styled.button`
   cursor: pointer;
   background-color: ${({ theme }) => theme.colors.yellow};
+  background-color: #c5e99b;
+  color: black;
   border: none;
   border-radius: 20px;
-  color: white;
   width: 150px;
   margin: 5px;
-
   padding: 4px;
   font-weight: bold;
   text-transform: uppercase;

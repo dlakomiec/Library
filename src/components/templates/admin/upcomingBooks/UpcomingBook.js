@@ -1,9 +1,11 @@
 import React from 'react';
 import firebase from 'util/firebase';
 import './App.css';
-import { WrapperBook, DeleteButton, CompleteButton } from './Book.styles';
+// import { WrapperBook, DeleteButton, MoveButton } from './UpcomingBook.styles';
+import { WrapperBook, DeleteButton, MoveButton } from './UpcomingBook.styles';
+import UpcomingForm from './UpcomingForm';
 
-const UpcomingBook = ({ book }) => {
+const UpcomingBook = ({ book, ...props }) => {
   const deleteBook = () => {
     const bookRef = firebase
       .database()
@@ -19,6 +21,20 @@ const UpcomingBook = ({ book }) => {
     bookRef.update({
       complete: !book.complete,
     });
+  };
+
+  const moveBook = async (book) => {
+    const bookRef = firebase.database().ref('Lista ksiazek');
+    const bookDel = firebase
+      .database()
+      .ref('Nadchodzące książki')
+      .child(book.id);
+    bookDel.remove();
+    const books = {
+      ...book,
+    };
+    console.log(books);
+    bookRef.push(book);
   };
 
   return (
@@ -39,7 +55,8 @@ const UpcomingBook = ({ book }) => {
         {book.genre}
       </p>
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
-      <CompleteButton onClick={completeBook}>Complete</CompleteButton>
+      <MoveButton onClick={() => moveBook(book)}>Przenieś do listy</MoveButton>
+      <MoveButton>Przenieś dodododdo listy</MoveButton>
     </WrapperBook>
   );
 };

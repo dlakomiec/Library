@@ -6,6 +6,7 @@ import FormInput from 'components/molecules/FormInput/FormInput';
 import firebase from 'util/firebase';
 import AdminNavigation from '../AdminNavigation/AdminNavigation';
 import UpcomingList from './UpcomingList';
+import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -159,9 +160,8 @@ const UpcomingForm = () => {
             );
           }}
         </Formik>
-
-        {/*<UpcomingList />*/}
       </Wrapper>
+      <UpcomingList />
     </>
   );
 };
