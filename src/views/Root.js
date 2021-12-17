@@ -31,8 +31,12 @@ const Root = () => {
         <GlobalStyle />
         <AuthProvider>
           <div>
-            <PrivateRoute exact path="/" component={Dashboard} />
-            <Route exact path="/login" component={LoginSite} />
+            <Route exact path="/" component={LoginSite} />
+            <PrivateRoute
+              exact
+              path="/dashboard"
+              component={WelcomeDashboard}
+            />
             <Route exact path="/signup" component={SignUpSite} />
             <PrivateRoute exact path="/form" component={Form} />
             <PrivateRoute exact path="/booklist" component={BooksList} />

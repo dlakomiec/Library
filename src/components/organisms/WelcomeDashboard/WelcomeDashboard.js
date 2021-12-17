@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navigation from '../Navigtion/Navigation';
+import UpcomingView from 'components/organisms/UpcomingView/UpcomingView';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding-left: 120px; */
+  margin-left: 220px;
 `;
 
 const DashboardWrapper = styled.div`
-  height: 100vh;
   width: 60%;
   display: flex;
   align-items: center;
@@ -26,6 +27,7 @@ const WelcomeDashboard = () => (
         <p>lorem ipsum cos tam cos tam </p>
       </DashboardWrapper>
     </Wrapper>
+    <UpcomingView />
   </>
 );
 

@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   label {
     margin: 10px 0;
   }
@@ -48,7 +47,7 @@ const DescWrapper = styled.div`
   height: 70px;
 `;
 
-const initialValues = { author: '', title: '', pages: '' };
+const initialValues = { author: '', title: '', pages: '', downloadURL: '' };
 
 const UpcomingForm = () => {
   const onSubmit = async (values, actions) => {
@@ -67,7 +66,7 @@ const UpcomingForm = () => {
     title: Yup.string().required('Tytuł jest wymagany'),
     // genre: Yup.string().required('Gatunek jest wymagany'),
     pages: Yup.string().required('Liczba stron jest wymagana '),
-    // picked: Yup.string().required('Liczba stron jest wymagana '),
+    downloadURL: Yup.string().required('Link do serwera jest wymagany '),
   });
 
   return (
@@ -97,7 +96,7 @@ const UpcomingForm = () => {
               <FormStyled onSubmit={handleSubmit}>
                 <FormInput
                   id="title"
-                  placeholder="Enter title"
+                  placeholder="Wpisz tytuł"
                   type="text"
                   values={values}
                   onChange={handleChange}
@@ -108,7 +107,7 @@ const UpcomingForm = () => {
                 />
                 <FormInput
                   id="author"
-                  placeholder="Enter author"
+                  placeholder="Wpisz Autora"
                   type="text"
                   values={values}
                   onChange={handleChange}
@@ -119,7 +118,7 @@ const UpcomingForm = () => {
                 />
                 <FormInput
                   id="pages"
-                  placeholder="pages"
+                  placeholder="Liczba stron"
                   type="number"
                   values={values}
                   onChange={handleChange}
@@ -127,6 +126,17 @@ const UpcomingForm = () => {
                   errors={errors}
                   touched={touched}
                   labelValue="Liczba stron: "
+                />
+                <FormInput
+                  id="downloadURL"
+                  placeholder="Link do serwera"
+                  type="text"
+                  values={values}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  errors={errors}
+                  touched={touched}
+                  labelValue="Download: "
                 />
                 <ChecboxForm>
                   <p>Gatunek książki:</p>
@@ -161,7 +171,6 @@ const UpcomingForm = () => {
           }}
         </Formik>
       </Wrapper>
-      <UpcomingList />
     </>
   );
 };

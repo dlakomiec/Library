@@ -20,7 +20,7 @@ export const SignOutButton = styled.button`
   padding: 4px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 300px;
+  margin-top: 50px;
 `;
 
 export const StyledLink = styled(NavLink).attrs({
@@ -29,7 +29,7 @@ export const StyledLink = styled(NavLink).attrs({
   text-decoration: none;
   color: black;
   margin: 20px 0;
-  width: 120px;
+  width: 150px;
   &:hover {
     text-decoration: none;
   }

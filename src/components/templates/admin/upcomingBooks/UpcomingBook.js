@@ -2,7 +2,12 @@ import React from 'react';
 import firebase from 'util/firebase';
 import './App.css';
 // import { WrapperBook, DeleteButton, MoveButton } from './UpcomingBook.styles';
-import { WrapperBook, DeleteButton, MoveButton } from './UpcomingBook.styles';
+import {
+  WrapperBook,
+  DeleteButton,
+  MoveButton,
+  DownloadButton,
+} from './UpcomingBook.styles';
 import UpcomingForm from './UpcomingForm';
 
 const UpcomingBook = ({ book, ...props }) => {
@@ -33,7 +38,7 @@ const UpcomingBook = ({ book, ...props }) => {
     const books = {
       ...book,
     };
-    console.log(books);
+    alert('Książka została przeniesiona');
     bookRef.push(book);
   };
 
@@ -54,9 +59,20 @@ const UpcomingBook = ({ book, ...props }) => {
         <span>Gatunek książki: </span>
         {book.genre}
       </p>
+      <p className={book.complete ? 'complete' : ''}>
+        <span>Chcesz pobrać? </span>
+
+        <DownloadButton>
+          <a href={book.downloadURL} target="_blank">
+            {' '}
+            Kliknij tutaj
+          </a>
+        </DownloadButton>
+      </p>
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
-      <MoveButton onClick={() => moveBook(book)}>Przenieś do listy</MoveButton>
-      <MoveButton>Przenieś dodododdo listy</MoveButton>
+      <MoveButton onClick={() => moveBook(book)}>
+        Przenieś do książek
+      </MoveButton>
     </WrapperBook>
   );
 };

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const BooksWrapper = styled.div`
+  margin-left: 220px;
+  width: 900px;
   h2 {
     text-align: center;
   }
@@ -10,15 +12,8 @@ export const BooksWrapper = styled.div`
       display: flex;
       flex-grow: 2;
       flex-wrap: wrap;
-      /* padding: 20px 30px; */
     }
   }
-  /* display: flex; */
-  /* height: 100vh; */
-  margin-left: 220px;
-  width: 900px;
-  /* background-color: #eff2f1; */
-  /* overflow-y: scroll; */
 `;
 
 export const Wrapper = styled.div`
@@ -26,4 +21,5 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;

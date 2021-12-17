@@ -6,7 +6,7 @@ export const NavWrapper = styled.nav`
   flex-direction: column;
   align-items: center;
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 220px;
   /* background-color: #edf6f9; */
   background-color: #d6d1cd;
@@ -21,7 +21,7 @@ export const SignOutButton = styled.button`
   padding: 4px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 300px;
+  margin-top: 50px;
 `;
 
 export const StyledLink = styled(NavLink).attrs({

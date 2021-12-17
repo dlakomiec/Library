@@ -32,7 +32,7 @@ const LoginSite = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/welcomedashboard" />;
+    return <Redirect to="/dashboard" />;
   }
 
   return (

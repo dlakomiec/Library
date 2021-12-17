@@ -41,3 +41,16 @@ export const CompleteButton = styled.button`
   font-weight: bold;
   text-transform: uppercase;
 `;
+
+export const DownloadButton = styled.button`
+  border: 1px solid grey;
+  list-style: none;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
+`;

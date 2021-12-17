@@ -1,7 +1,12 @@
 import React from 'react';
 import firebase from 'util/firebase';
 import './App.css';
-import { WrapperBook, DeleteButton, CompleteButton } from './Book.styles';
+import {
+  WrapperBook,
+  DeleteButton,
+  CompleteButton,
+  DownloadButton,
+} from './Book.styles';
 
 const Book = ({ book }) => {
   const deleteBook = () => {
@@ -35,6 +40,16 @@ const Book = ({ book }) => {
       <p className={book.complete ? 'complete' : ''}>
         <span>Gatunek książki: </span>
         {book.genre}
+      </p>
+      <p className={book.complete ? 'complete' : ''}>
+        <span>Chcesz pobrać? </span>
+
+        <DownloadButton>
+          <a href={book.downloadURL} target="_blank">
+            {' '}
+            Kliknij tutaj
+          </a>
+        </DownloadButton>
       </p>
 
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
