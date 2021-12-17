@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/templates/admin/upcomingBooks/App.css"],"names":[],"mappings":"AAAA,UACE,4BACF","file":"main.e1c5493b.chunk.css","sourcesContent":[".complete {\n  text-decoration: line-through;\n}\n"]}
