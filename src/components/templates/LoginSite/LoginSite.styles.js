@@ -38,6 +38,11 @@ export const RightDiv = styled.div`
       font-size: ${({ theme }) => theme.fontSize.l};
     }
   }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const LoginButton = styled.button`
@@ -54,15 +59,9 @@ export const LoginButton = styled.button`
 
 export const SignInButton = styled.button`
   cursor: pointer;
-  width: 400px;
-  height: 60px;
-  background-color: ${({ theme }) => theme.colors.yellow};
   border: none;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  color: white;
-  margin-top: 30px;
+  font-size: 14px;
   text-transform: uppercase;
-  margin-top: 10px;
 `;
 
 export const AdminButton = styled.button`

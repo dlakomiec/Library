@@ -41,7 +41,7 @@ const AdminLogin = ({ history }) => {
         </label>
         <button type="submite">Zaloguj do panelu</button>
       </form>
-      <Link to="/login">
+      <Link to="/">
         <MainPageButton>Strona główna</MainPageButton>
       </Link>
     </Wrapper>

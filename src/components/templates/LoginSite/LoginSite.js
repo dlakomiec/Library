@@ -49,9 +49,12 @@ const LoginSite = ({ history }) => {
               <input name="password" type="password" placeholder="Password" />
             </label>
             <LoginButton type="submit">Zaloguj sie</LoginButton>
-            <Link to="/signup">
-              <SignInButton>Zarejestruj sie</SignInButton>
-            </Link>
+            <div>
+              <p>Potrzebujesz konta? </p>
+              <Link to="/signup">
+                <SignInButton>Zarejestruj sie</SignInButton>
+              </Link>
+            </div>
           </form>
           <Link to="/adminlogin">
             <AdminButton>Admin</AdminButton>

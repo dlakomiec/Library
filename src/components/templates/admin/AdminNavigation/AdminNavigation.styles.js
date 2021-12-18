@@ -20,8 +20,28 @@ export const SignOutButton = styled.button`
   color: white;
   padding: 4px;
   font-weight: bold;
+  height: 30px;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-right: 20px;
+`;
+export const Bottom = styled.div`
+  position: fixed;
+
+  width: 100%;
+  height: 40px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d6d1cd;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  h2 {
+    padding: 0;
+    margin-left: 50px;
+  }
 `;
 
 export const StyledLink = styled(NavLink).attrs({

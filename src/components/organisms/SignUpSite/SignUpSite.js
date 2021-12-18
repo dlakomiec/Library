@@ -15,18 +15,26 @@ const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
-      const { email, password, password2 } = event.target.elements;
-      // if (event.target.elements.password == event.target.elements.password2) {
+      const { email, password } = event.target.elements;
       try {
         await firebase
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
         history.push('/');
+
+        const userRef = firebase.database().ref('Użytkownicy');
+        const name = event.target.elements.name.value;
+        const emailAdress = event.target.elements.email.value;
+        const UUID = firebase.auth().currentUser.uid;
+        const user = {
+          UUID,
+          emailAdress,
+          name,
+        };
+        userRef.push(user);
       } catch (error) {
         alert(error);
       }
-      // alert('hasla sa inne');
-      // }
     },
     [history]
   );
@@ -38,13 +46,13 @@ const SignUp = ({ history }) => {
         <h1>Zarejestruj sie</h1>
         <form onSubmit={handleSignUp}>
           <label>
+            <input name="name" type="text" placeholder="Imie" />
+          </label>
+          <label>
             <input name="email" type="email" placeholder="Email" />
           </label>
           <label>
             <input name="password" type="password" placeholder="Password" />
-          </label>
-          <label>
-            <input name="password2" type="password" placeholder="Password" />
           </label>
           <SignupButton type="submit">Zarejestruj się</SignupButton>
         </form>
