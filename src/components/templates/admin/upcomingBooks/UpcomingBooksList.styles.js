@@ -19,6 +19,8 @@ export const BooksWrapper = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
+  padding-top: 40px;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;

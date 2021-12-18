@@ -22,6 +22,7 @@ export const BooksWrapper = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

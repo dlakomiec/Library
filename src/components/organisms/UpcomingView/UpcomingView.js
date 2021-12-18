@@ -8,6 +8,8 @@ const SectionWrapper = styled.div`
   //background-color: lightblue;
   margin-left: 220px;
   margin-top: -20px;
+  padding-right: 20px;
+  //padding-top: 50px;
 
   div {
     text-align: center;

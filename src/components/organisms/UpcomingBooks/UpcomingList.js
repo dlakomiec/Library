@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   //justify-content: center;
   //align-items: center;
   h2 {
-    padding-top: 25px;
+    padding-top: 60px;
     text-shadow: 2px 2px 2px #000000;
   }
 `;

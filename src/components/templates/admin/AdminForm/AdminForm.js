@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 40px;
   label {
     margin: 10px 0;
   }

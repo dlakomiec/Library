@@ -9,6 +9,7 @@ export const NavWrapper = styled.nav`
   height: 100vh;
   width: 220px;
   background-color: #edf6f9;
+  margin-top: 40px;
 `;
 
 export const Bottom = styled.div`

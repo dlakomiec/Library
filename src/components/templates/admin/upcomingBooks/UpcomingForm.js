@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   label {
     margin: 10px 0;
   }
+  padding-top: 40px;
 `;
 
 const FormStyled = styled.form`

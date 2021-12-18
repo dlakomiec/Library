@@ -10,6 +10,7 @@ export const NavWrapper = styled.nav`
   width: 220px;
   /* background-color: #edf6f9; */
   background-color: #d6d1cd;
+  margin-top: 40px;
 `;
 
 export const SignOutButton = styled.button`
@@ -26,7 +27,6 @@ export const SignOutButton = styled.button`
 `;
 export const Bottom = styled.div`
   position: fixed;
-
   width: 100%;
   height: 40px;
   background-color: pink;
