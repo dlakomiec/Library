@@ -6,10 +6,11 @@ import {
   Bottom,
 } from './AdminNavigation.styles';
 import firebase from 'util/firebase';
+import { Redirect } from 'react-router';
 
 const LogOut = () => {
-  alert(`Wylogowano poprawnie`);
   firebase.auth().signOut();
+  alert(`Wylogowano poprawnie`);
 };
 
 const AdminNavigation = () => (

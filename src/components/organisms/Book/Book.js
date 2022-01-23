@@ -1,7 +1,8 @@
 import React from 'react';
 import firebase from 'util/firebase';
 import './App.css';
-import { WrapperBook, DeleteButton, CompleteButton } from './Book.styles';
+import { WrapperBook, DownloadButton } from './Book.styles';
+import styled from 'styled-components';
 
 const Book = ({ book }) => {
   const deleteBook = () => {
@@ -17,23 +18,31 @@ const Book = ({ book }) => {
 
   return (
     <WrapperBook>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Tytuł ksiązki: </span> {book.title}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Autor ksiazki: </span>
         {book.author}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Gatunek książki: </span>
         {book.genre}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Liczba stron: </span>
         {book.pages}
       </p>
-      {/* <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton> */}
-      <CompleteButton onClick={completeBook}>Complete</CompleteButton>
+      <p>
+        <span>Chcesz pobrać? </span>
+
+        <DownloadButton>
+          <a href={book.downloadURL} target="_blank">
+            {' '}
+            Kliknij tutaj
+          </a>
+        </DownloadButton>
+      </p>
     </WrapperBook>
   );
 };

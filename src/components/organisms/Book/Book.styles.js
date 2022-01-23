@@ -15,29 +15,15 @@ export const WrapperBook = styled.div`
   }
 `;
 
-export const DeleteButton = styled.button`
+export const DownloadButton = styled.button`
+  border: 1px solid grey;
+  list-style: none;
+  background-color: white;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.red};
-  border: none;
-  border-radius: 20px;
-  color: white;
-  padding: 4px;
-  width: 150px;
-  margin: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
-export const CompleteButton = styled.button`
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.yellow};
-  border: none;
-  border-radius: 20px;
-  color: white;
-  width: 150px;
-  margin: 5px;
-
-  padding: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 5px;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
 `;

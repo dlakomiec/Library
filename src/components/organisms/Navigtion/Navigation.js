@@ -23,11 +23,8 @@ const Navigation = () => (
       </div>
     </Bottom>
     <NavWrapper>
-      {/*//zmien nazwe*/}
-      <StyledLink to="/dashboard">NAZWA STRONY</StyledLink>
-      <StyledLink to="/form">Dodaj książkę </StyledLink>
+      <StyledLink to="/dashboard">Strona główna</StyledLink>
       <StyledLink to="/bookList">Lista książek</StyledLink>
-      {/*<SignOutButton onClick={LogOut}>Wyloguj</SignOutButton>*/}
     </NavWrapper>
   </>
 );

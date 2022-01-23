@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-// import app from './base';
 import firebase from 'util/firebase';
 import {
   LeftDiv,
@@ -52,7 +51,7 @@ const SignUp = ({ history }) => {
             <input name="email" type="email" placeholder="Email" />
           </label>
           <label>
-            <input name="password" type="password" placeholder="Password" />
+            <input name="password" type="password" placeholder="Hasło" />
           </label>
           <SignupButton type="submit">Zarejestruj się</SignupButton>
         </form>

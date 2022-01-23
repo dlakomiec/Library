@@ -1,12 +1,6 @@
 import React from 'react';
 import firebase from 'util/firebase';
-import './App.css';
-import {
-  WrapperBook,
-  DeleteButton,
-  CompleteButton,
-  DownloadButton,
-} from './Book.styles';
+import { WrapperBook, DeleteButton, DownloadButton } from './Book.styles';
 
 const Book = ({ book }) => {
   const deleteBook = () => {
@@ -22,26 +16,23 @@ const Book = ({ book }) => {
 
   return (
     <WrapperBook>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Tytuł ksiązki: </span> {book.title}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Autor ksiazki: </span>
         {book.author}
       </p>
-      {/*<p className={book.complete ? 'complete' : ''}>*/}
-      {/*  <span>Gatunek ksiązki: </span>*/}
-      {/*  {book.genre}*/}
-      {/*</p>*/}
-      <p className={book.complete ? 'complete' : ''}>
+
+      <p>
         <span>Liczba stron: </span>
         {book.pages}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Gatunek książki: </span>
         {book.genre}
       </p>
-      <p className={book.complete ? 'complete' : ''}>
+      <p>
         <span>Chcesz pobrać? </span>
 
         <DownloadButton>
@@ -53,7 +44,6 @@ const Book = ({ book }) => {
       </p>
 
       <DeleteButton onClick={deleteBook}>Usuń ksiazke</DeleteButton>
-      <CompleteButton onClick={completeBook}>Complete</CompleteButton>
     </WrapperBook>
   );
 };

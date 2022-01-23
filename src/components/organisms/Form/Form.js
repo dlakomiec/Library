@@ -104,7 +104,7 @@ const Form1 = () => {
                   </label>
                   <label>
                     <Field type="radio" name="genre" value="Rozwój osobisty" />
-                    Rozwój osobisty
+                    Rozwój osobistyddddddddddddddddddddddd
                   </label>
                   <label>
                     <Field type="radio" name="genre" value="Kryminał" />

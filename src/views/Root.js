@@ -52,7 +52,7 @@ const Root = () => {
             />
             <PrivateRoute exact path="/users-list" component={UsersList} />
             <PrivateRoute exact path="/upcominglist" component={UpcomingList} />
-            <Route exact path="/admin" component={AdminDashboard} />
+            <PrivateRoute exact path="/admin" component={AdminDashboard} />
           </div>
         </AuthProvider>
       </ThemeProvider>

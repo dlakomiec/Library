@@ -46,7 +46,7 @@ const LoginSite = ({ history }) => {
               <input name="email" type="email" placeholder="Email" />
             </label>
             <label>
-              <input name="password" type="password" placeholder="Password" />
+              <input name="password" type="password" placeholder="Hasło" />
             </label>
             <LoginButton type="submit">Zaloguj sie</LoginButton>
             <div>
