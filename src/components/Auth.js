@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'util/firebase.js';
+import styled from 'styled-components';
+
+const Wrappep = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 35px;
+`;
 
 export const AuthContext = React.createContext();
 
@@ -32,7 +41,11 @@ export const AuthProvider = ({ children }) => {
   }, [currentUser]);
 
   if (pending) {
-    return <>Loading...</>;
+    return (
+      <Wrappep>
+        <p>Loading...</p>
+      </Wrappep>
+    );
   }
 
   return (

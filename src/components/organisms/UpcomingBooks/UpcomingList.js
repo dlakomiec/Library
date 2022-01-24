@@ -9,9 +9,13 @@ const Wrapper = styled.div`
   //flex-direction: row;
   //justify-content: center;
   //align-items: center;
+
+  div {
+    padding-left: 20px;
+  }
+
   h2 {
     padding-top: 60px;
-    text-shadow: 2px 2px 2px #000000;
   }
 `;
 
