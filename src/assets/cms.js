@@ -7,6 +7,7 @@ import book4 from './imgaes/book4.jpeg';
 import book5 from './imgaes/book5.jpeg';
 import book6 from './imgaes/book6.jpeg';
 import book7 from './imgaes/book7.jpeg';
+import icon from './imgaes/library.svg';
 
 export const cms = {
   images: {
@@ -20,7 +21,9 @@ export const cms = {
     book6,
     book7,
   },
-  icons: {},
+  icons: {
+    icon,
+  },
   texts: {
     one:
       ' Lorem Ipsum is simply dummy text of the printing and\n' +

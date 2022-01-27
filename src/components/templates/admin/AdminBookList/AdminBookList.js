@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'util/firebase';
 import { BooksWrapper, Wrapper } from './BooksList.styles';
-// import Book from '../Book/Book';
 import AdminBook from '../AdminBook/AdminBook';
-// import Navigation from '../Navigtion/Navigation';
 import AdminNavigation from '../AdminNavigation/AdminNavigation';
 
 const BooksList = () => {

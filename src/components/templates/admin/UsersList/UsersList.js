@@ -5,11 +5,29 @@ import User from './User';
 import AdminNavigation from 'components/templates/admin/AdminNavigation/AdminNavigation';
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
   padding: 50px 0 0 220px;
   h3 {
     text-align: center;
   }
+  div {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 2;
+      flex-wrap: wrap;
+    }
+  }
+`;
+
+const UserWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  //flex-wrap: wrap;
 `;
 
 const UsersList = () => {
@@ -37,15 +55,11 @@ const UsersList = () => {
       <Wrapper>
         <h3>Użytkownicy</h3>
         <div>
-          <div>
-            <ul>
-              {userList
-                ? userList.map((user, index) => (
-                    <User user={user} key={index} />
-                  ))
-                : ''}
-            </ul>
-          </div>
+          <ul>
+            {userList
+              ? userList.map((user, index) => <User user={user} key={index} />)
+              : ''}
+          </ul>
         </div>
       </Wrapper>
     </>

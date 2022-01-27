@@ -23,7 +23,8 @@ const Routes = () => {
       <Route exact path="/signup" component={SignUpSite} />
       <Route exact path="/adminlogin" component={AdminLogin} />
       <Route path="*">
-        <Redirect to="/signup" />
+        {/*<Redirect to="/signup" />*/}
+        <Redirect to="/" />
       </Route>
       {userAuth ? (
         <>
@@ -31,7 +32,7 @@ const Routes = () => {
           <PrivateRoute exact path="/booklist" component={BooksList} />
           <PrivateRoute exact path="/welcome" component={WelcomeDashboard} />
           <Route path="*">
-            <Redirect to="/dashboard" />
+            <Redirect to="/" />
           </Route>
         </>
       ) : null}

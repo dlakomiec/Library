@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const User = ({ user, ...props }) => {
   const UserWrapper = styled.div`
+    height: 70px;
+    width: 400px;
     margin-bottom: 40px;
     span {
       font-weight: bold;
